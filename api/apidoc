@@ -1,0 +1,60 @@
+register
+=======
+localhost:8000/api/register
+method:POST
+data:{username,email,password}
+
+token
+=======
+localhost:8000/api/token/
+method:POST
+data:{username,password}
+
+listmovies
+========
+localhost:8000/api/movies/
+method:GET
+authentication:token
+
+moviedetail
+=======
+localhost:8000/api/movies/{id}/
+method:GET
+authentication:token
+
+review add
+========
+localhost:8000/api/movies/{id}/add_review/
+method:POST
+authentication:token
+data:{comment,rating}
+
+review detail
+============
+
+localhost:8000/api/review/{id}/
+method:GET
+authentication:token
+
+edit review
+============
+localhost:8000/api/reviews/{id}/
+method:Put
+authentication:token
+data:{comment,rating}
+
+permissions {IsAuthenticated,IsAdminUser,Allowany...} custompermission
+
+listgenres
+==========
+localhost:8000/api/movies/genres/
+method:GET
+authentication:token
+
+listmovies based on genre
+=========================
+localhost:8000/api/movies/?genre=comedy
+method:GET
+authentication:token
+
+
